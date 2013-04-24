@@ -3,7 +3,11 @@ angular-base
 
 Simple Sinatra app that uses Haml and AngularJS
 
-    git clone
+installation:
+
+    git clone https://github.com/t3hronin/angular-base
+
+    cd angular-base
 
     bundle install
 
