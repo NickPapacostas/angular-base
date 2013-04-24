@@ -1,0 +1,10 @@
+.container
+  %h2 View 2
+  City:
+  %br
+  %input{:type => "text", "data-ng-model" => "city"}
+  %br
+  %ul
+    %li{"data-ng-repeat" => "person in people | filter:city | orderBy: 'city'"} {{person.name | lowercase}} - {{person.city | uppercase}}
+
+  %a{:href => "#/view1"}View 1

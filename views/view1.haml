@@ -1,0 +1,20 @@
+.container
+  %h2 View 1
+  Name:
+  %input{:type => "text", "data-ng-model" => "filter.name"}
+  %br
+  %div{:enter => "directive", :leave => "directive"} CONNNNNNNTENT!
+  %ul
+    %li{"data-ng-repeat" => "person in people | filter:filter.name | orderBy: 'city'"} {{person.name | lowercase}} - {{person.city | uppercase}}
+
+  Customer Name:
+  %input{:type => "text", "data-ng-model" => "newPerson.name"}
+  %br
+  Customer City:
+  %input{:type => "text", "data-ng-model" => "newPerson.city"}
+  %br
+  %button{"data-ng-click" => "addPerson()"} Add Person
+  %a{:href => "#/view2"}View 2
+
+
+

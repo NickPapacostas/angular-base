@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'puma'
 require './app'
 
 

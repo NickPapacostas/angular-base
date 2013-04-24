@@ -4,25 +4,10 @@
     %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}
 
   %body
-    .container{"data-ng-controller" => "SimpleController"}
-      Name:
-      %br
-      %input{:type => "text", "data-ng-model" => "name"}
-      %ul
-        %li{"data-ng-repeat" => "person in names | filter:name | orderBy: 'city'"} {{person.name | lowercase}} - {{person.city | uppercase}}
-
+    %div{"data-ng-view" => ""}
 
     %script{:src => "js/angular.min.js"}
+    %script{:src => "js/main.js"}
 
-    :javascript
-      var demoApp = angular.module('demoApp', []);
-      var controllers = {};
-      controllers.SimpleController = function( $scope) {
-        $scope.names =[
-          {name:'Sal Salvatore', city: 'nyc'},
-          {name: 'ron1n', city: 'LA'},
-          {name:'King Calamari', city: 'Tampa'}
-        ];
-      };
-      demoApp.controller(controllers);
+
 
