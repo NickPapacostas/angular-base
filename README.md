@@ -3,6 +3,12 @@ angular-base
 
 Simple Sinatra app that uses Haml and AngularJS
 
+    git clone
+
+    bundle install
+
+    ruby app.rb
+
 Pulled from https://github.com/dannolan/angularjs-sinatra-bootstrap-template
 
 and
