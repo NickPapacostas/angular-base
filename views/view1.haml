@@ -1,16 +1,17 @@
 .container
-  %h2 View 1
-  Name:
+  %h2 Listing people!
+
+  Search by Name:
   %input{:type => "text", "data-ng-model" => "filter.name"}
   %br
   %div{:enter => "loadMore()", :leave => "btn"} CONNNNNNNTENT!
   %ul
     %li{"data-ng-repeat" => "person in people | filter:filter.name | orderBy: 'city'"} {{person.name | lowercase}} - {{person.city | uppercase}}
 
-  Customer Name:
+  Person Name:
   %input{:type => "text", "data-ng-model" => "newPerson.name"}
   %br
-  Customer City:
+  Person City:
   %input{:type => "text", "data-ng-model" => "newPerson.city"}
   %br
   %button{"data-ng-click" => "addPerson()"} Add Person
