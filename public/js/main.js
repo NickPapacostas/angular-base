@@ -18,21 +18,35 @@ demoApp.config(function($routeProvider) {
 });
 
 //***Directives
-demoApp.directive("enter", function(){
-  return function(scope, element){
-    element.bind("mouseenter", function(){
-      console.log("mouse entered!");
+demoApp.directive("leave", function(){
+  return function(scope, element, attrs){
+    element.bind("mouseleave", function(){
+      element.removeClass(attrs.leave)
     });
   }
 });
 
-demoApp.directive("leave", function(){
-  return function(scope, element){
-    element.bind("mouseleave", function(){
-      console.log("mouse left!");
+demoApp.directive("enter", function(){
+  return function(scope, element, attrs){
+    element.bind("mouseenter", function(){
+      element.addClass("btn")
+      scope.$apply(attrs.enter);
     });
-  };
+  }
 });
+
+// demoApp.directive("leave", function(){
+//   return {
+//     //C for class, A for attribute( e.g. <div leave> , E is for element (e.g. <leave></leave>) )
+//     //doesn't work right now dunno if its the attribute syntax and haml or typo
+//     restrict: "C",
+//     link: function(){
+//       element.bind("mouseleave", function(){
+//         console.log("mouse left!");
+//       });
+//     }
+//   };
+// });
 
 
 //***Factories
@@ -59,8 +73,7 @@ demoApp.factory('simpleFactory', function(){
 var controllers = {};
 
 controllers.SimpleController = function( $scope, simpleFactory) {
-  $scope.people =[
-  ];
+  $scope.people =[];
   init();
   function init(){
     $scope.people = simpleFactory.getPeople();
@@ -69,6 +82,12 @@ controllers.SimpleController = function( $scope, simpleFactory) {
   $scope.addPerson = function () {
     $scope.people.push({name: $scope.newPerson.name, city: $scope.newPerson.city});
   };
+
+  $scope.loadMore = function () {
+    console.log("more inc");
+  };
+
+
 };
 
 demoApp.controller(controllers);
