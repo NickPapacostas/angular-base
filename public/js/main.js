@@ -55,6 +55,7 @@ demoApp.factory('simpleFactory', function(){
     {name:'Sal Salvatore', city: 'nyc'},
     {name: 'ron1n', city: 'LA'},
     {name:'King Calamari', city: 'Tampa'}
+    {name: 'gentlewomyn1', city: 'femville'}
   ];
 
   var factory = {};
