@@ -1,7 +1,12 @@
 angular-base
 ============
 
-Simple Sinatra app that uses Haml and AngularJS
+Simple Sinatra app that uses:
+ - Haml
+ - AngularJS
+ - twitter bootstrap
+ - compass/sass
+
 
 installation:
 
