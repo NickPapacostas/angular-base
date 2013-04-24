@@ -54,7 +54,7 @@ demoApp.factory('simpleFactory', function(){
   var people = [
     {name:'Sal Salvatore', city: 'nyc'},
     {name: 'ron1n', city: 'LA'},
-    {name:'King Calamari', city: 'Tampa'}
+    {name:'King Calamari', city: 'Tampa'},
     {name: 'gentlewomyn1', city: 'femville'}
   ];
 
