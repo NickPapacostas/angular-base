@@ -1,8 +1,7 @@
-require 'rubygems'
-require 'compass'
+require 'bundler/setup'
 require 'sinatra'
+require 'compass'
 require 'haml'
-require 'json'
 
 set :app_file, __FILE__
 set :root, File.dirname(__FILE__)
